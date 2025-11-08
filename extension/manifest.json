@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Profile Demo Scraper",
+  "version": "1.1",
+  "auther":"sreyashi saha",
+  "description": "A demo Chrome extension that scrapes mock profile data and sends it to a local backend.",
+  "permissions": ["tabs", "scripting", "activeTab"],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Profile Demo Scraper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:8000/profile*.html"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

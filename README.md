@@ -1,44 +1,15 @@
-# Tab Title Viewer Chrome Extension
+# 🧩 Profile Demo Scraper (Chrome Extension + Node Backend)
 
-A simple Chrome extension that displays the title of the currently active browser tab when a button is clicked.
+A demo Chrome Extension that scrapes mock profile data from local HTML pages and sends it to an Express backend API for storage.  
+Built to demonstrate **extension–backend communication**, **DOM data extraction**, and **tab automation** — all using safe, mock data.
 
-## 📌 Features
-- Shows the active tab's title instantly.
-- Clean and minimal popup UI.
-- Lightweight and easy to use.
+---
 
-## 🛠️ Installation (Developer Mode)
-1. Download or clone this repository.
-2. Open **Google Chrome**.
-3. Go to `chrome://extensions/`
-4. Enable **Developer mode** (top-right corner).
-5. Click **Load unpacked**.
-6. Select the folder containing this extension.
+## ⚙️ Tech Stack
+- **Frontend / Extension:** HTML, JavaScript, Chrome Manifest v3  
+- **Backend:** Node.js, Express, Sequelize (SQLite)  
+- **Local Hosting:** Python HTTP Server
 
-## 📂 Files Included
-- `manifest.json` — Extension config file.
-- `popup.html` — UI for the popup.
-- `popup.js` — Script to fetch and show tab title.
-
-## 🚀 How to Use
-1. Click on the extension icon from the toolbar.
-2. Press the button in the popup.
-3. The title of the current tab will appear on the screen.
-
-## 🧑‍💻 Permissions Used
-- `activeTab` — Access current tab information.
-- `tabs` — Read the title of the current tab.
-
-## 📄 Manifest Example
-```json
-{
-  "manifest_version": 3,
-  "name": "Tab Title Viewer",
-  "version": "1.0",
-  "author": "Sreyashi Saha",
-  "description": "Shows the title of the current tab when a button is clicked.",
-  "permissions": ["tabs", "activeTab"],
-  "action": {
-    "default_popup": "popup.html"
-  }
-}
+## ⚙️ Set Up
+- **Running the Express Backend:** cd to backend folder and run node server.js after initiatizing npm
+- **Setting up the Python http server for dumy_pages:** cd to dumy_pages folder and run python -m http.server 8000
